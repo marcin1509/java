@@ -1,0 +1,56 @@
+package lab8;
+
+interface Bankier
+{
+    double licz(int a, int b);
+}
+
+class BankierUczciwy implements Bankier{
+    @Override
+    public double licz(int a, int b){
+     int e = a;
+     int f = b;
+     double suma = a+b;
+     return suma;
+    }
+}
+
+class BankierPodstepny implements Bankier{
+        
+    @Override
+    public double licz(int a, int b){
+     int e = a;
+     int f = b;
+     double suma = (a+b)*0.8;
+     return suma;
+    }
+}
+
+public class Bank {
+    int kasa1;
+    int kasa2;
+    
+    public Bank(int kasa1, int kasa2){
+        this.kasa1 = kasa1;
+        this.kasa2 = kasa2;
+    }
+    
+    public int sumuj(Bankier bankier){
+        int suma;
+        suma = kasa1+kasa2;
+        return suma;
+    }
+    
+    public static void main(String[] args) {
+        Bankier bankier = null;
+        Bank bank = new Bank(2000,3000);
+        System.out.println(bank.sumuj(bankier));
+        
+        BankierUczciwy uczciwy = new BankierUczciwy();
+        System.out.println(bank.sumuj(uczciwy));
+        
+        BankierPodstepny nieuczciwy = new BankierPodstepny();
+        System.out.println(bank.sumuj(nieuczciwy));
+    }
+    
+}
