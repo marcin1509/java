@@ -1,0 +1,154 @@
+/**
+PROJEKT METODY NUMERYCZNE
+SZYFROWANIE RSA
+-------------------------
+1. Dla zadanej pary liczb p i q oraz dla ich iloczynu jest wyznaczana zaszyfrowana postac liczby
+2. Deszyfracja :
+	a. Wyznaczenie NWD z liczb (p-1) i s , (q-1) i s , p i q
+	b. Wyznaczone w pkt a wspolczynniki podstawiane sa do wzoru, z ktorego otrzymamy liczbe odszyfrowana.
+
+Dane sa obliczane, ale wartości są wykorzystywane ręcznie z powodu wiekszego skomplikowania problemu - korzystano z klasy BigInteger, która nie działa
+w tak łatwy sposób, jak zwykłe typy zmiennych.
+**/
+
+package rsa;
+
+import java.math.BigInteger;
+
+public class RSA {
+    float cq, dq, cp, dp, pp, qp;
+    public void nwd1(int a, int b) {
+        int d,r1,r2;
+        float u,v,u1,u2,t,p1,p2;
+
+    u1=1;
+    r1=a;
+    u2=0;
+    r2=b;
+
+    while (r2>0)
+    {
+        t=r1/r2;
+
+        p1=u1; //zmienna pomocnicza dla u//
+        u1=u2;
+        p2=r1; //zmienna pomocnicza dla r//
+        r1=r2;
+        u2=p1-t*u2;
+        r2=(int) (p2-t*r2);
+    }
+
+    d=r1;
+    u=u1;
+    v=(r1-u1*a)/b;
+
+    System.out.println("NWD dla " + a + " i " + b + " wynosi "+"u i v wynosza "+u+" "+v);
+    cp = u;
+    dp = v;
+    }
+    
+    public void nwd2(int a, int b) {
+        int d,r1,r2;
+        float u,v,u1,u2,t,p1,p2;
+
+    u1=1;
+    r1=a;
+    u2=0;
+    r2=b;
+
+    while (r2>0)
+    {
+        t=r1/r2;
+
+        p1=u1; //zmienna pomocnicza dla u//
+        u1=u2;
+        p2=r1; //zmienna pomocnicza dla r//
+        r1=r2;
+        u2=p1-t*u2;
+        r2=(int) (p2-t*r2);
+    }
+
+    d=r1;
+    u=u1;
+    v=(r1-u1*a)/b;
+
+    System.out.println("NWD dla " + a + " i " + b + " wynosi "+"u i v wynosza "+u+" "+v);
+    cq =u;
+    dq = v;
+}
+    
+    public void nwd3(int a, int b) {
+        int d,r1,r2;
+        float u,v,u1,u2,t,p1,p2;
+
+    u1=1;
+    r1=a;
+    u2=0;
+    r2=b;
+
+    while (r2>0)
+    {
+        t=r1/r2;
+
+        p1=u1; //zmienna pomocnicza dla u//
+        u1=u2;
+        p2=r1; //zmienna pomocnicza dla r//
+        r1=r2;
+        u2=p1-t*u2;
+        r2=(int) (p2-t*r2);
+    }
+
+    d=r1;
+    u=u1;
+    v=(r1-u1*a)/b;
+
+    System.out.println("NWD dla " + a + " i " + b + " wynosi "+"u i v wynosza "+u+" "+v);
+    qp=u;
+    pp=v;
+    }
+    public static void main(String[] args) {
+    // szyfrowanie 
+
+    int liczba = 445;
+    int p = 29;
+    int q = 41;
+    int r = p*q;
+    int s = 11;
+    BigInteger szyfr = new BigInteger("445");
+    BigInteger podst = new BigInteger("11");
+    BigInteger pot = new BigInteger("1189");
+    szyfr = szyfr.modPow(podst, pot);
+    System.out.println("Zaszyfrowana forma liczby 445 to ((445 ^ 11) mod 1189"+szyfr); 
+    RSA rsa = new RSA();
+    // deszyfracja etap 1 - wyznaczanie wspołczynnikow
+    
+    rsa.nwd1(28,11); // NWD dla (p-1) i s
+    rsa.nwd2(40,11); // NWD dla (q-1) i s
+    rsa.nwd3(41,29); // NWD dla p i q
+    
+    // deszyfracja etap 2 - podstawienie do wzoru i wyznaczenie wyniku
+    // BigInteger szyfr2 = new BigInteger("669");
+    float p_ = 29;
+    float q_ = 41;
+    
+    BigInteger szyfr2 = new BigInteger("669");
+    float wsp1_1 = q_*rsa.qp;
+    BigInteger wsp1 = new BigInteger("-492");
+    BigInteger potega = new BigInteger("23");
+    BigInteger modul = new BigInteger("29");
+    szyfr2 = wsp1.multiply(szyfr2.modPow(potega, modul)); // pierwszy czynnik rownania
+    float wsp2_1 = p*rsa.pp;
+    BigInteger wsp2 = new BigInteger("493");
+    BigInteger potega2 = new BigInteger("11");
+    BigInteger modul2 = new BigInteger("41");
+    BigInteger szyfr3 = new BigInteger("669");
+    szyfr3 = wsp2.multiply(szyfr3.modPow(potega2, modul2)); // drugi czynnik rownania
+    BigInteger szyfr_nowy = new BigInteger("0");
+    szyfr_nowy = szyfr2.add(szyfr3);
+    BigInteger mod_lo = new BigInteger("1189");
+    szyfr_nowy = szyfr_nowy.mod(mod_lo);
+    System.out.println("q*q'*(663^23 mod 29) = "+szyfr2);
+    System.out.println("p*p'*(669^11 mod 41) = "+szyfr3);
+    System.out.println("Odszyfrowana forma liczby 669 to (wynik mod 1189) = "+szyfr_nowy);
+    }
+}
