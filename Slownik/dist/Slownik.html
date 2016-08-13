@@ -1,0 +1,45 @@
+<html><head>
+  <SCRIPT src="./web-files/dtjava.js"></SCRIPT>
+<script>
+    function launchApplication(jnlpfile) {
+        dtjava.launch(            {
+                url : 'Slownik.jnlp',
+                jnlp_content : 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxqbmxwIHNwZWM9IjEuMCIgeG1sbnM6amZ4PSJodHRwOi8vamF2YWZ4LmNvbSIgaHJlZj0iU2xvd25pay5qbmxwIj4NCiAgPGluZm9ybWF0aW9uPg0KICAgIDx0aXRsZT5TbG93bmlrPC90aXRsZT4NCiAgICA8dmVuZG9yPk1hcmNpbjwvdmVuZG9yPg0KICAgIDxkZXNjcmlwdGlvbj5udWxsPC9kZXNjcmlwdGlvbj4NCiAgICA8b2ZmbGluZS1hbGxvd2VkLz4NCiAgPC9pbmZvcm1hdGlvbj4NCiAgPHJlc291cmNlcz4NCiAgICA8ajJzZSB2ZXJzaW9uPSIxLjYrIiBocmVmPSJodHRwOi8vamF2YS5zdW4uY29tL3Byb2R1Y3RzL2F1dG9kbC9qMnNlIi8+DQogICAgPGphciBocmVmPSJTbG93bmlrLmphciIgc2l6ZT0iMzEzMjYiIGRvd25sb2FkPSJlYWdlciIgLz4NCiAgICA8amFyIGhyZWY9ImxpYlxzcWxpdGUtamRiYy0zLjguMTEuMi5qYXIiIHNpemU9IjU1NzUzNTEiIGRvd25sb2FkPSJlYWdlciIgLz4NCiAgPC9yZXNvdXJjZXM+DQogIDxhcHBsZXQtZGVzYyAgd2lkdGg9IjgwMCIgaGVpZ2h0PSI2MDAiIG1haW4tY2xhc3M9ImNvbS5qYXZhZngubWFpbi5Ob0phdmFGWEZhbGxiYWNrIiAgbmFtZT0iU2xvd25payIgPg0KICAgIDxwYXJhbSBuYW1lPSJyZXF1aXJlZEZYVmVyc2lvbiIgdmFsdWU9IjguMCsiLz4NCiAgPC9hcHBsZXQtZGVzYz4NCiAgPGpmeDpqYXZhZngtZGVzYyAgd2lkdGg9IjgwMCIgaGVpZ2h0PSI2MDAiIG1haW4tY2xhc3M9InNsb3duaWsuU2xvd25payIgIG5hbWU9IlNsb3duaWsiIC8+DQogIDx1cGRhdGUgY2hlY2s9ImFsd2F5cyIvPg0KPC9qbmxwPg0K'
+            },
+            {
+                javafx : '8.0+'
+            },
+            {}
+        );
+        return false;
+    }
+</script>
+
+<script>
+    function javafxEmbedslownik() {
+        dtjava.embed(
+            {
+                id : 'slownik',
+                url : 'Slownik.jnlp',
+                placeholder : 'javafx-app-placeholder',
+                width : '800',
+                height : '600',
+                jnlp_content : 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxqbmxwIHNwZWM9IjEuMCIgeG1sbnM6amZ4PSJodHRwOi8vamF2YWZ4LmNvbSIgaHJlZj0iU2xvd25pay5qbmxwIj4NCiAgPGluZm9ybWF0aW9uPg0KICAgIDx0aXRsZT5TbG93bmlrPC90aXRsZT4NCiAgICA8dmVuZG9yPk1hcmNpbjwvdmVuZG9yPg0KICAgIDxkZXNjcmlwdGlvbj5udWxsPC9kZXNjcmlwdGlvbj4NCiAgICA8b2ZmbGluZS1hbGxvd2VkLz4NCiAgPC9pbmZvcm1hdGlvbj4NCiAgPHJlc291cmNlcz4NCiAgICA8ajJzZSB2ZXJzaW9uPSIxLjYrIiBocmVmPSJodHRwOi8vamF2YS5zdW4uY29tL3Byb2R1Y3RzL2F1dG9kbC9qMnNlIi8+DQogICAgPGphciBocmVmPSJTbG93bmlrLmphciIgc2l6ZT0iMzEzMjYiIGRvd25sb2FkPSJlYWdlciIgLz4NCiAgICA8amFyIGhyZWY9ImxpYlxzcWxpdGUtamRiYy0zLjguMTEuMi5qYXIiIHNpemU9IjU1NzUzNTEiIGRvd25sb2FkPSJlYWdlciIgLz4NCiAgPC9yZXNvdXJjZXM+DQogIDxhcHBsZXQtZGVzYyAgd2lkdGg9IjgwMCIgaGVpZ2h0PSI2MDAiIG1haW4tY2xhc3M9ImNvbS5qYXZhZngubWFpbi5Ob0phdmFGWEZhbGxiYWNrIiAgbmFtZT0iU2xvd25payIgPg0KICAgIDxwYXJhbSBuYW1lPSJyZXF1aXJlZEZYVmVyc2lvbiIgdmFsdWU9IjguMCsiLz4NCiAgPC9hcHBsZXQtZGVzYz4NCiAgPGpmeDpqYXZhZngtZGVzYyAgd2lkdGg9IjgwMCIgaGVpZ2h0PSI2MDAiIG1haW4tY2xhc3M9InNsb3duaWsuU2xvd25payIgIG5hbWU9IlNsb3duaWsiIC8+DQogIDx1cGRhdGUgY2hlY2s9ImFsd2F5cyIvPg0KPC9qbmxwPg0K'
+            },
+            {
+                javafx : '8.0+'
+            },
+            {}
+        );
+    }
+    <!-- Embed FX application into web page once page is loaded -->
+    dtjava.addOnloadCallback(javafxEmbedslownik);
+</script>
+
+</head><body>
+<h2>Test page for <b>Slownik</b></h2>
+  <b>Webstart:</b> <a href='Slownik.jnlp' onclick="return launchApplication('Slownik.jnlp');">click to launch this app as webstart</a><br><hr><br>
+
+  <!-- Applet will be inserted here -->
+  <div id='javafx-app-placeholder'></div>
+</body></html>

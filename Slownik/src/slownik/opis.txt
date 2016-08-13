@@ -1,0 +1,39 @@
+*******************************************************************************************************************************************************************
+*																																								  *
+*																																								  *
+*																S£OWNIK POLSKO-£OTEWSKI v.1.0																	  *
+*																	  Marcin Szynkowski				   													          *
+*																																								  *
+*																																								  *
+*******************************************************************************************************************************************************************
+
+1. Opis programu
+
+S³ownik polsko-³otewski to aplikacja pozwalaj¹ca na wyszukiwanie t³umaczeñ polskich s³ów i wyra¿eñ na jêzyk ³otewski. 
+
+2. Baza dostarczona z programem
+
+Z programem jest dostarczana baza danych, z której korzysta program. Znajduj¹ siê w niej wszystkie definicje s³ów, jakie mo¿na wyszukiwaæ.
+Liczbê s³ów w bazie mo¿na zobaczyæ w dolnym obszarze aplikacji.
+
+3. Oznaczenia wykorzystywane przy wymowie
+
+Przy wszystkich s³ówkach i wyra¿eniach jest podana przybli¿ona wymowa danego s³owa/wyra¿enia. Jest ona napisana po polsku, maksymalnie zbli¿ona do ³otewskiej 
+wymowy. Gdy spotkasz znak dwukropka ":" w wymowie, oznacza to, ¿e w s³owie musimy wymówiæ d³u¿ej tê literê ,przy której siê znajduje. Jest to spowodowane
+obecnoœci¹ w jêzyku ³otewskim liter z przed³u¿on¹ wymow¹. W normalnej pisowni jest to oznaczane poziom¹ kresk¹ nad literk¹. 
+Akcent nie jest oznaczany, gdy¿ w jêzyku ³otewskim, oprócz paru wyj¹tków akcent pada na pierwsz¹ sylabê.
+
+4. Informacje o s³ówku, jakie uzyskamy
+
+a.Czêœæ mowy - wa¿na rzecz szczególnie przy nauce gramatyki. 
+W s³owniku wystêpuj¹ : czasowniki, rzeczowniki, przys³ówki, przymiotniki i inne czêœci mowy.
+Jedyn¹ ró¿nic¹ jest tu fraza, która tak¿e jest traktowana jako czêœæ mowy, mimo, ¿e nie tak na prawdê siê tego nie robi. Wybór ten spowodowany jest unifikacj¹
+wszystkich kategorii w jednej kolumnie.
+b.Uproszczona wymowa - Wymowa ³otewska jest bardzo zbli¿ona do pisowni, co nie powinno sprawiaæ problemu przy nauce, jednak¿e zapis wymowy mo¿e j¹ troszkê
+u³atwiæ.
+c.T³umaczenie - w³aœciwe t³umaczenie na jêzyk ³otewski.
+
+5.B³êdy i sugestie
+
+Jeœli wyst¹pi¹ jakieœ b³êdy w programie, albo macie Pañstwo jakieœ sugestie lub pytania, piszcie na adres "patex.patex@o2.pl" .
+
